@@ -1,0 +1,21 @@
+<% if(typeof finalexamresult!== 'undefined'){ %>
+<div class="columns is-centered">
+  <div class="column is-half has-text-centered">
+    <h1 class="title is-3 is-capitalized">your correct answers</h1>
+    <h1 class="title is-5"><%= correctanswer %></h1>
+    <h1 class="title is-3 is-capitalized">your wrong answers</h1>
+    <h1 class="title is-5"><%= finalexamresult.length %></h1>
+  </div>
+</div>
+<% if(finalexamresult.length===0) {%>
+<h1 class="title is-4 is-capitalized has-text-centered">
+  congratulation you answered all questions correctly
+</h1>
+<% } %> <% } %> <% if (wronganswer.length>0){ %>
+<h1 class="title is-1 is-capitalized">correct answers</h1>
+<% wronganswer.forEach(element => { %>
+<h1 class="title is-3">Q) &nbsp; <%= element.question %></h1>
+<p class="title is-4 is-capitalized">Ans: &nbsp;<%= element.correctanswer %></p>
+<hr />
+
+<% }); %> <% } %>

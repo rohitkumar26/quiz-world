@@ -1,0 +1,21 @@
+<div class="columns is-centered">
+  <div class="column is-half">
+    <h1 class="title is-1 has-text-centered">Create Exam</h1>
+    <form action="/exam" method="post">
+      <label for="name" class="label">Name</label>
+      <input class="input" type="text" name="name" /><br />
+      <label for="description" class="label">Description</label>
+      <input class="input" type="text" name="description" />
+      <label for="question" class="label">Question</label>
+      <textarea name="question" class="textarea"></textarea><br />
+      <label for="" class="label">Options</label>
+      <input type="text" name="answers[]" />
+      <input type="text" name="answers[]" /><br />
+      <input type="text" name="answers[]" />
+      <input type="text" name="answers[]" /><br />
+      <label for="correctanswer" class="label">Correct Answer</label>
+      <input class="input" type="text" name="correctanswer" />
+      <input type="submit" class="button is-primary mt-2" value="Submit" />
+    </form>
+  </div>
+</div>

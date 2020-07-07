@@ -1,0 +1,23 @@
+body {
+  margin: 0px;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  width: 40%;
+}
+.answers p {
+  color: grey;
+  border: 2px dashed dodgerblue;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 5px;
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
