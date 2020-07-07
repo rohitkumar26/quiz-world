@@ -1,7 +1,7 @@
 <div class="columns is-centered">
   <div class="column is-half  ">
     <% result.forEach((element,index)=>{ %>
-    <h1 class="title is-3">Q<%= index +1 %>) <%= element.question %></h1>
+    <h1 class="title is-4 is-capitalized">Q<%= index +1 %>) <%= element.question %></h1>
     <div class="answers ">
       <form action="/exam/checkexam" method="post">
         <input type="hidden" name="ids[]" value="<%=element._id%>">
