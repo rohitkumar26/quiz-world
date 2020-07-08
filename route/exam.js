@@ -21,6 +21,7 @@ router.get('/', async (req, res) => {
     try {
         const result = await Exam.find(req.query).exec();
         const result2 = await Exam.find().countDocuments().exec();
+
         res.send(result);
     }
     catch (err) {

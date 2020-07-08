@@ -6,6 +6,7 @@ const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
 var morgan = require('morgan');
 const helmet = require("helmet");
+const Exam = require('./models/exam');
 
 
 //myroutes
@@ -31,9 +32,12 @@ mongoose.connect(mongodburi, { useNewUrlParser: true, useUnifiedTopology: true }
     .catch(error => console.log(err));
 
 
-app.get('/', (req, res) => {
-    res.send('hello');
+app.get('/', async (req, res) => {
+    const diffexam = await Exam.distinct('name');
 
+    res.render('index', {
+        diffquiz: diffexam
+    });
 })
 
 

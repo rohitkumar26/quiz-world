@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap");
 
+* {
+  /* background-color: hsl(0, 0%, 98%); */
+  background-color: hsl(48, 100%, 67%);
+  /* background-color: hsl(48, 100%, 96%); */
+}
 body {
   margin: 0px;
-  background-color: hsl(0, 0%, 98%);
+
   font-family: "Raleway", sans-serif;
   /* font-family: "Playfair Display", serif; */
   /* font-family: 'Montserrat Subrayada', sans-serif; */
+  height: 100vh;
 }
 
 .answers {
@@ -26,4 +32,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 90vh;
+}
+.all-quizes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.quiz-cards {
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: hsl(348, 100%, 61%);
+  background-color: hsl(347, 90%, 96%);
+}
+.quiz-cards a:hover {
+  transform: scale(1.2);
+  transition-timing-function: ease;
 }
