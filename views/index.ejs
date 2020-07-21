@@ -1,15 +1,25 @@
-<div class="wrapper">
-  <h1 class="title is-1 "> Fun Quizzes For Kids</h1>
-  <div class="all-quizes is-capitalized">
-      <% diffquiz.forEach(el=>{ %>
-        <div class="quiz-cards ">
-            <h1 class="tag is-dark is-large"><%= el %> </h1><br>
-            <a href="/exam/getexam/<%= el %>" class="button is-primary mt-2">Take quiz</a>
-          </div>
-      <% }) %> 
+
+<div class="columns ">
+  
+    
+
+  <div class="column">
+    <div class="wrapper">
+      <h1 class="title is-3 mt-2 has-text-black main-head"> <i class="fa fa-child" style="color:red;" aria-hidden="true"></i>Fun Quizzes For Kids</h1>
+      <div class="all-quizes is-capitalized">
+          <% diffquiz.slice().reverse().forEach(el=>{ %>
+            <div class="quiz-cards is-mobile">
+                <h1 class="tag is-dark is-large"><%= el %> </h1><br>
+                <a href="/exam/getexam/<%= el %>" class="button is-primary mt-2">Take quiz</a>
+              </div>
+          <% }) %> 
+       
+      </div>
+      
+    </div>
+    </div>
    
   </div>
-  
 </div>
-</div>
+
 <%- include('partials/footer') %>

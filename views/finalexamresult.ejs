@@ -1,10 +1,20 @@
 <% if(typeof finalexamresult!== 'undefined'){ %>
 <div class="columns is-centered">
   <div class="column is-half has-text-centered">
-    <h1 class="title is-4 is-capitalized">your correct answers</h1>
-    <h1 class="title is-5"><%= correctanswer %></h1>
-    <h1 class="title is-4 is-capitalized">your wrong answers</h1>
-    <h1 class="title is-5"><%= finalexamresult.length %></h1>
+    <h1 class="title is-4 is-capitalized">
+      <i class="fa fa-check" style="color: green;" aria-hidden="true"></i>your
+      correct answers
+    </h1>
+    <h1 class="title is-5 has-background-success has-text-white py-3">
+      <%= correctanswer %>
+    </h1>
+    <h1 class="title is-4 is-capitalized">
+      <i class="fa fa-times" style="color: red;" aria-hidden="true"></i>your
+      wrong answers
+    </h1>
+    <h1 class="title is-5 has-background-danger has-text-white py-3">
+      <%= finalexamresult.length %>
+    </h1>
   </div>
 </div>
 <% if(finalexamresult.length===0) {%>
@@ -24,5 +34,5 @@
 
 <% }); %> <% } %>
 <p class="has-text-centered">
-  <a href="/" class="button is-info">Back To Home page</a>
+  <a href="/" class="button is-info mb-5">Back To Home page</a>
 </p>

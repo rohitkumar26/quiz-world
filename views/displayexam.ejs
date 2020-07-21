@@ -1,12 +1,12 @@
 <div class="columns is-centered">
   <div class="column is-half">
     <% result.forEach((element,index)=>{ %>
-    <h1 class="title is-4 is-capitalized">
+    <h1 class="title is-4 is-capitalized myquestion">
       Q<%= index +1 %>) <%= element.question %>
     </h1>
 
     <form action="/exam/checkexam" method="post">
-      <div class="answers">
+      <div class="answers is-mobile">
         <input type="hidden" name="ids[]" value="<%=element._id%>" />
         <input type="hidden" name="currentname" value="<%= currentname %> " />
         <% let counter=1;element.answers.forEach(el=>{ %>

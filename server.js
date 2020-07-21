@@ -33,6 +33,7 @@ mongoose.connect(mongodburi, { useNewUrlParser: true, useUnifiedTopology: true }
 
 
 app.get('/', async (req, res) => {
+
     const diffexam = await Exam.distinct('name');
 
     res.render('index', {

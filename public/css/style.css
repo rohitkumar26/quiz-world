@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap");
-
-* {
-  /* background-color: hsl(0, 0%, 98%); */
-  background-color: hsl(48, 100%, 67%);
-  /* background-color: hsl(48, 100%, 96%); */
-}
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap");
 body {
   margin: 0px;
+  background-color: hsla(48, 100%, 67%, 0.7);
 
   font-family: "Raleway", sans-serif;
+  /* background-image: url("/images/back2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
   /* font-family: "Playfair Display", serif; */
   /* font-family: 'Montserrat Subrayada', sans-serif; */
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .answers {
@@ -20,14 +20,22 @@ body {
   gap: 0px;
   width: 40%;
 }
+@media only screen and (max-width: 500px) {
+  .answers {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+    width: 40%;
+  }
+}
 .answers p {
   color: grey;
   border: 2px dashed dodgerblue;
   padding: 5px;
   border-radius: 10px;
   margin: 5px;
-  width: 200px;
-  height: 70px;
+  min-width: 200px;
+  min-height: 70px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -38,12 +46,26 @@ body {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  height: 90vh;
+  min-height: 90vh;
 }
 .all-quizes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
+}
+@media only screen and (max-width: 600px) {
+  .all-quizes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+}
+@media only screen and (max-width: 810px) and (min-width: 601px) {
+  .all-quizes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
 }
 
 .quiz-cards {
@@ -58,4 +80,60 @@ body {
 .quiz-cards a:hover {
   transform: scale(1.2);
   transition-timing-function: ease;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: hsla(348, 100%, 61%, 0.7);
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  flex-flow: row wrap;
+}
+.nav-links > * {
+  margin-right: 5px;
+}
+.nav-links li {
+  list-style-type: none;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+.nav-links li a:hover {
+  background-color: white;
+  color: #1a1a1a;
+  border: 2px solid black;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a1a;
+  letter-spacing: 0.3em;
+}
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+/* .myquestion {
+  background-color: hsl(171, 100%, 41%);
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+} */
+.mybamboo img {
+  min-height: 90vh;
+}
+
+.main-head {
+  font-family: "Merienda One", cursive;
+  letter-spacing: 0.2em;
 }
